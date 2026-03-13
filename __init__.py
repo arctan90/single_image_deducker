@@ -1,0 +1,12 @@
+NODE_CLASS_MAPPINGS = {}
+NODE_DISPLAY_NAME_MAPPINGS = {}
+
+try:
+    from .duck_decode_node import NODE_CLASS_MAPPINGS as DECODE_NODES, NODE_DISPLAY_NAME_MAPPINGS as DECODE_DISPLAY
+    NODE_CLASS_MAPPINGS.update(DECODE_NODES)
+    NODE_DISPLAY_NAME_MAPPINGS.update(DECODE_DISPLAY)
+except Exception as e:
+    print(f"❌ single_image_deducker Import Error: {e}")
+
+WEB_DIRECTORY = "./js"
+__all__ = ["NODE_CLASS_MAPPINGS", "NODE_DISPLAY_NAME_MAPPINGS", "WEB_DIRECTORY"]

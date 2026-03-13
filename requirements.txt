@@ -1,0 +1,3 @@
+# 本节点依赖（ComfyUI 已自带 torch，无需安装）
+pillow
+numpy
